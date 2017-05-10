@@ -1,0 +1,23 @@
+# bundler
+/.bundle
+/vendor/bundle
+
+# build Middleman
+/build
+
+# css y js generados
+/source/dist
+
+# Sass
+/.sass-cache
+/.cache
+/.tmp
+
+# OSX
+.DS_Store
+
+# Node
+**/node_modules
+
+# Atom
+.ftpconfig

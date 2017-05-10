@@ -1,0 +1,78 @@
+@import
+  'normalize',
+  'rouge';
+
+$small: 396px;
+$large: 1200px;
+
+$spacing: 1rem;
+
+@function between($to, $from, $toWidth, $fromWidth) {
+  $slope: ($to - $from) / ($toWidth - $fromWidth);
+  $base: $from - $slope * $fromWidth;
+
+  @return calc(#{$base} + #{100vw * $slope});
+}
+
+@mixin container($ancho: 40rem){
+  max-width: $ancho;
+  margin: 0 auto;
+  padding: 0 $spacing;
+}
+
+@mixin unstiled-list {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  @include container;
+}
+
+main * + * {
+  margin-top: $spacing;
+}
+
+[href="#main"] {
+  position: absolute;
+  top: 0;
+  right: 100%;
+
+  &:focus {
+    right: auto;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+footer, header {
+  ul {
+    @include unstiled-list;
+  }
+
+  p {
+    margin: 0;
+  }
+}
