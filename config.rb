@@ -23,11 +23,6 @@ end
 
 helpers do
 
-  # turns string into safe url
-  def to_url(str)
-    return ActiveSupport::Inflector.transliterate(str).downcase.gsub(' ','-')
-  end
-
   # creates link with active class in case its href is the current url
   def menu_link(link_text, url, options = {})
     if current_resource.url === "#{url}/" || current_resource.url === "#{url}"
