@@ -1,41 +1,7 @@
 @import
   'normalize',
-  'rouge';
-
-$small: 396px;
-$large: 1200px;
-
-$spacing: 1rem;
-
-@function between($to, $from, $toWidth, $fromWidth) {
-  $slope: ($to - $from) / ($toWidth - $fromWidth);
-  $base: $from - $slope * $fromWidth;
-
-  @return calc(#{$base} + #{100vw * $slope});
-}
-
-@mixin container($ancho: 40rem){
-  max-width: $ancho;
-  margin: 0 auto;
-  padding: 0 $spacing;
-}
-
-@mixin unstiled-list {
-  padding: 0;
-  margin: 0;
-
-  li {
-    list-style: none;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
+  'rouge',
+  'mixins';
 
 html {
   box-sizing: border-box;
@@ -63,7 +29,7 @@ main * + * {
   }
 }
 
-img {
+img, input, textarea, select {
   max-width: 100%;
 }
 

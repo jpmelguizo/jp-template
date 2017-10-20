@@ -1,6 +1,6 @@
 # jp-template
 
-Template for Middleman projects. Uses gulp-sass and browser-sync through Middleman's [external pipeline feature](https://middlemanapp.com/advanced/external-pipeline/). It includes some other random features like syntax highlight, js concatenation and some basic styles. Heavily inspired in NathanBowers [mm-template](https://github.com/NathanBowers/mm-template). I use it mainly for small personal projects.
+Template for Middleman projects using gulp-sass and browser-sync through Middleman's [external pipeline feature](https://middlemanapp.com/advanced/external-pipeline/). It includes some other features like syntax highlight, js concatenation and some basic styles. Modified from  [mm-template](https://github.com/NathanBowers/mm-template). I use it mainly for small personal projects.
 
 ## Requirements
 
